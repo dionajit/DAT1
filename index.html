@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DAT</title>
+    <link rel="icon" href="images/title.png" type="image/gif">
+    <link rel="stylesheet" href="styles2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    
+  </head>
+  <body>
+<!-- -------------HEADER------------   -->
+
+<section class="header">
+  <nav>
+    <a href="index.php"><img src="images2/logo3.png" alt="logo" style="width: 250px; height: auto;" /></a>
+    <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.php">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li class="dropdown">
+              <a href="#">ACTIVITIES</a>
+              <ul class="dropdown-menu">
+                  <li><a href="student_activities.html">Student Centric Activities</a></li>
+                  <li><a href="faculty_activities.html">Faculty Centric Activities</a></li>
+              </ul>
+          </li>
+          <li><a href="contact.php">CONTACT</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="Admin/signin.php" class="button-86">Sign In</a></li>
+
+        </ul>
+    </div>
+    <i class="fa fa-bars" onclick="showMenu()"></i>
+</nav>
+
+  <div class="text-box">
+      <h1>Department of Data Science and Statistics</h1>
+      <p>
+          Providing a dynamic research environment and effective education, comprising state-of-the-art training in
+          scientific methodologies for data-driven solutions.
+      </p>
+      <a href="" class="hero-btn">Learn More</a>
+  </div>
+</section>
+
+    <!-- <! -----------------DEPARTMENT News---------------   --- >     -->
+    <section class="department-news">
+      <div class="news-overlay"></div>
+      <h1>Department News</h1>
+      <div class="news-wrapper">
+          <div class="scroller" data-speed="slow">
+              <div class="scroller__inner">
+                  <!-- Original Set -->
+                  <div class="news-col">
+                      <div class="news-date">13 JAN 2025</div>
+                      <h3>Workshop on AI in Data Science</h3>
+                      <p>Explore cutting-edge AI techniques in Data Science in this engaging workshop.</p>
+                      <div class="news-footer">
+                          <span class="badge">Workshop</span>
+                          <span class="arrow">→</span>
+                      </div>
+                  </div>
+                  <div class="news-col">
+                      <div class="news-date">31 JAN 2025</div>
+                      <h3>Alumni Meeting</h3>
+                      <p>Reconnect with alumni and celebrate milestones in this exciting event.</p>
+                      <div class="news-footer">
+                          <span class="badge">Event</span>
+                          <span class="arrow">→</span>
+                      </div>
+                  </div>
+                  <div class="news-col">
+                      <div class="news-date">08 JAN 2025</div>
+                      <h3>Jiju Gillariose Awarded Stipend</h3>
+                      <p>Congratulations to Jiju Gillariose for receiving a ₹13 lakhs research stipend!</p>
+                      <div class="news-footer">
+                          <span class="badge">Achievement</span>
+                          <span class="arrow">→</span>
+                      </div>
+                  </div>
+                  <div class="news-col">
+                      <div class="news-date">10 FEB 2025</div>
+                      <h3>Research Paper Published: Quantum Computing</h3>
+                      <p>Our team's latest research paper on Quantum Computing is now available.</p>
+                      <div class="news-footer">
+                          <span class="badge">Research</span>
+                          <span class="arrow">→</span>
+                      </div>
+                  </div>
+                  <div class="news-col">
+                      <div class="news-date">15 FEB 2025</div>
+                      <h3>Guest Lecture on Cybersecurity Trends</h3>
+                      <p>Join us for an insightful guest lecture exploring the future of cybersecurity.</p>
+                      <div class="news-footer">
+                          <span class="badge">Lecture</span>
+                          <span class="arrow">→</span>
+                      </div>
+                  </div>
+                  <!-- Duplicate Set for Seamless Loop -->
+                  <div class="news-col">
+                      <div class="news-date">13 JAN 2025</div>
+                      <h3>Workshop on AI in Data Science</h3>
+                      <p>Explore cutting-edge AI techniques in Data Science in this engaging workshop.</p>
+                      <div class="news-footer">
+                          <span class="badge">Workshop</span>
+                          <span class="arrow">→</span>
+                      </div>
+                  </div>
+                  <div class="news-col">
+                      <div class="news-date">31 JAN 2025</div>
+                      <h3>Alumni Meeting</h3>
+                      <p>Reconnect with alumni and celebrate milestones in this exciting event.</p>
+                      <div class="news-footer">
+                          <span class="badge">Event</span>
+                          <span class="arrow">→</span>
+                      </div>
+                  </div>
+                  <div class="news-col">
+                      <div class="news-date">08 JAN 2025</div>
+                      <h3>Jiju Gillariose Awarded Stipend</h3>
+                      <p>Congratulations to Jiju Gillariose for receiving a ₹13 lakhs research stipend!</p>
+                      <div class="news-footer">
+                          <span class="badge">Achievement</span>
+                          <span class="arrow">→</span>
+                      </div>
+                  </div>
+                  <div class="news-col">
+                      <div class="news-date">10 FEB 2025</div>
+                      <h3>Research Paper Published: Quantum Computing</h3>
+                      <p>Our team's latest research paper on Quantum Computing is now available.</p>
+                      <div class="news-footer">
+                          <span class="badge">Research</span>
+                          <span class="arrow">→</span>
+                      </div>
+                  </div>
+                  <div class="news-col">
+                      <div class="news-date">15 FEB 2025</div>
+                      <h3>Guest Lecture on Cybersecurity Trends</h3>
+                      <p>Join us for an insightful guest lecture exploring the future of cybersecurity.</p>
+                      <div class="news-footer">
+                          <span class="badge">Lecture</span>
+                          <span class="arrow">→</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <a href="#" class="news-btn">View All News</a>
+  </section>
+    <!-- <! -----------------COURSE---------------   --- >     -->
+    <section class="course">
+      <h1>Courses We Offer</h1>
+      <p class="sub-text">Explore our programs designed for the next generation of data and statistical experts.</p>
+  
+      <div class="ag-format-container">
+          <div class="ag-courses_box">
+              <div class="ag-courses_item">
+                  <a href="https://christuniversity.in/admission-ug" class="ag-courses-item_link">
+                      <div class="ag-courses-item_bg"></div>
+                      <div class="ag-courses-item_title">Undergraduate</div>
+                      <div class="ag-courses-item_date-box">
+                          Programs:
+                          <span class="ag-courses-item_date">
+                              B.Sc. (Computer Science, Statistics), B.Sc. (Data Science, Mathematics), B.Sc. (Data Science & AI)
+                          </span>
+                      </div>
+                  </a>
+              </div>
+  
+              <div class="ag-courses_item">
+                  <a href="https://christuniversity.in/admission-pg" class="ag-courses-item_link">
+                      <div class="ag-courses-item_bg"></div>
+                      <div class="ag-courses-item_title">Postgraduate</div>
+                      <div class="ag-courses-item_date-box">
+                          Programs:
+                          <span class="ag-courses-item_date">
+                              M.Sc. Statistics, M.Sc. Data Analytics, M.Sc. Data Science
+                          </span>
+                      </div>
+                  </a>
+              </div>
+  
+              <div class="ag-courses_item">
+                  <a href="https://christuniversity.in/admission-phd" class="ag-courses-item_link">
+                      <div class="ag-courses-item_bg"></div>
+                      <div class="ag-courses-item_title">Doctoral (PhD)</div>
+                      <div class="ag-courses-item_date-box">
+                          Programs:
+                          <span class="ag-courses-item_date">
+                              PhD in Statistics, PhD in Data Science
+                          </span>
+                      </div>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  <!-- Separator Header -->
+<div class="section-separator">
+  <h2>Our Mission & Vision</h2>
+</div>
+
+<!-- ---------- Mission & Vision Section ---------- -->
+<section class="mission-vision-section">
+  <div class="mission-container">
+    <div class="card slide-in" id="vision-card">
+      <h2>Vision</h2>
+      <p>Excellence and Service</p>
+    </div>
+    <div class="card slide-in" id="mission-card">
+      <h2>Mission</h2>
+      <p>CHRIST (Deemed to be University) is a nurturing ground for an individual's holistic development to make effective contribution to society in a dynamic environment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Core Values Section -->
+<section class="core-values-section">
+  <div class="core-values-container">
+    <h2>Core Values</h2>
+    <div class="values-grid">
+      <div class="value-card fade-in"><h3>Faith in God</h3></div>
+      <div class="value-card fade-in"><h3>Moral Uprightness</h3></div>
+      <div class="value-card fade-in"><h3>Love of Fellow Beings</h3></div>
+      <div class="value-card fade-in"><h3>Social Responsibility</h3></div>
+      <div class="value-card fade-in"><h3>Pursuit of Excellence</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+ <!-- Testimonials -->
+<section class="testimonials">
+  <h1>What Our Students Say</h1>
+  
+  <div class="testimonial-container">
+    <div class="testimonial-card">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-content" data-id="1">
+        <img src="images2/stud.jpg" alt="Dion" class="student-img" />
+        <h3>“Hands-on learning & expert faculty”</h3>
+        <p>The Department of Statistics and Data Science provided me with hands-on learning, expert faculty, and industry exposure. The well-structured curriculum and research opportunities helped me secure an internship in analytics. - Dion</p>
+        <div class="rating">
+          <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+        </div>
+      </div>
+      <!-- Testimonial 2 -->
+      <div class="testimonial-content hidden" data-id="2">
+        <img src="images2/stud.jpg" alt="Monica" class="student-img" />
+        <h3>“An amazing experience!”</h3>
+        <p>Studying here was an amazing experience! The faculty, real-world projects, and strong analytical foundation prepared me for the industry. - Monica</p>
+        <div class="rating">
+          <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+        </div>
+      </div>
+      <!-- Testimonial 3 -->
+      <div class="testimonial-content hidden" data-id="3">
+        <img src="images2/stud.jpg" alt="Jeremy" class="student-img" />
+        <h3>“Practical applications rock!”</h3>
+        <p>The program's emphasis on practical applications and statistical computing was invaluable - Jeremy</p>
+        <div class="rating">
+          <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- ----------CALL TO ACTION----------  -->
+
+    <section class="cta">
+      <h1>
+        Enroll For Our Various Courses <br />
+      </h1>
+      <a href="contact.html" class="hero-btn">CONTACT US</a>
+    </section>
+
+    <!-- -----------FOOTER----------  -->
+    <section class="footer">
+
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+      <p>Made by Jeremy Monica & Dion </p>
+    </section>
+
+    <!-- <! ---------JavaScript for Toggle Menu ---------  > -->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+
+      
+document.getElementById('vision-card').addEventListener('mouseenter', () => {
+  document.getElementById('mission-card').style.opacity = '0.5';
+});
+
+document.getElementById('vision-card').addEventListener('mouseleave', () => {
+  document.getElementById('mission-card').style.opacity = '1';
+});
+
+document.getElementById('mission-card').addEventListener('mouseenter', () => {
+  document.getElementById('vision-card').style.opacity = '0.5';
+});
+
+document.getElementById('mission-card').addEventListener('mouseleave', () => {
+  document.getElementById('vision-card').style.opacity = '1';
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const slideInElements = document.querySelectorAll(".slide-in");
+    const fadeInElements = document.querySelectorAll(".fade-in");
+
+    function revealOnScroll() {
+        const triggerBottom = window.innerHeight * 0.85;
+
+        slideInElements.forEach((el) => {
+            const boxTop = el.getBoundingClientRect().top;
+            if (boxTop < triggerBottom) {
+                el.classList.add("show");
+            }
+        });
+
+        fadeInElements.forEach((el) => {
+            const boxTop = el.getBoundingClientRect().top;
+            if (boxTop < triggerBottom) {
+                el.classList.add("show");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); // Trigger when page loads
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const slideInElements = document.querySelectorAll(".slide-in");
+    const fadeInElements = document.querySelectorAll(".fade-in");
+
+    function revealOnScroll() {
+        const triggerBottom = window.innerHeight * 0.85;
+
+        slideInElements.forEach((el) => {
+            const boxTop = el.getBoundingClientRect().top;
+            if (boxTop < triggerBottom) {
+                el.classList.add("show");
+            }
+        });
+
+        fadeInElements.forEach((el) => {
+            const boxTop = el.getBoundingClientRect().top;
+            if (boxTop < triggerBottom) {
+                el.classList.add("show");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); // Trigger when page loads
+});
+
+});
+
+// Initialize the infinite scroll
+const scrollers = document.querySelectorAll(".scroller");
+
+// If a user hasn't opted in for reduced motion, then we add the animation
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    addAnimation();
+}
+
+function addAnimation() {
+    scrollers.forEach((scroller) => {
+        // Add data-animated="true" to every .scroller on the page
+        scroller.setAttribute("data-animated", true);
+
+        // Make an array from the elements within .scroller__inner
+        const scrollerInner = scroller.querySelector(".scroller__inner");
+        const scrollerContent = Array.from(scrollerInner.children);
+
+        // For each item in the array, clone it and add it to the .scroller__inner
+        scrollerContent.forEach((item) => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden", true);
+            scrollerInner.appendChild(duplicatedItem);
+        });
+    });
+}
+
+
+// Testimonial Rotation
+const testimonials = document.querySelectorAll(".testimonial-content");
+let currentTestimonial = 0;
+
+function rotateTestimonials() {
+  testimonials.forEach((testimonial, index) => {
+    if (index === currentTestimonial) {
+      testimonial.classList.remove("hidden");
+    } else {
+      testimonial.classList.add("hidden");
+    }
+  });
+
+  currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+}
+
+setInterval(rotateTestimonials, 5000); // Change every 5 seconds
+rotateTestimonials(); // Initial call
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+
+    <section class="sub-header">
+      <nav>
+        <a href="index.php"><img src="images2/logo3.png" alt="logo" style="width: 250px; height: auto;" /></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+              <li><a href="index.php">HOME</a></li>
+              <li><a href="about.html">ABOUT</a></li>
+              <li class="dropdown">
+                  <a href="#">ACTIVITIES</a>
+                  <ul class="dropdown-menu">
+                      <li><a href="student/studentcentric.html">STUDENT CENTRIC ACTIVITIES</a></li>
+                      <li><a href="facultycentric.php">FACULTY CENTRIC ACTIVITIES</a></li>
+                      <li><a href="reports.php">DEPARTMENT REPORTS ARCHIVE</a></li>
+                  </ul>
+              </li>
+              <li><a href="contact.php">CONTACT</a></li>
+              <li><a href="gallery.html">GALLERY</a></li>
+              <li><a href="Admin/signin.php" class="login-btn">SIGN IN</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    
+    
+      <h1>About Us</h1>
+    </section>
+
+    <!-- ----------ABOUT US CONTENT------------ -->
+    <section class="about-us">
+      <div class="row">
+        <div class="about-col">
+          <h1>About our Department</h1>
+          <p>
+            <h2>Dynamic Research and Effective Education</h2>
+            The Department of Data Science and Statistics strives to provide a dynamic research environment and effective education. Our curriculum integrates statistical knowledge and data science techniques, adhering to worldwide standards to address real-time, complex data challenges.
+          </p>
+          <p>
+            <h2>Holistic Development</h2>
+            We foster higher-order thinking and research skills through our curriculum and teaching pedagogy. Our co-curricular activities aim to develop essential life skills and inspire self-exploration, preparing students for the ever-evolving data industry.
+          </p>
+
+        </div>
+        <div class="about-col">
+          <img src="images2/university.jpg" alt="University Image">
+        </div>
+      </div>
+    </section>
+  
+    <!-- HOD Message Section -->
+    <section class="about-hod">
+      <div class="row">
+        <div class="hod-image-col">
+          <img src="images2/hod.jpg" alt="HOD Image">
+          <h3>SALEEMA JS</h3>
+        </div>
+        <div class="hod-message-col">
+          <h1>Message from HOD</h1>
+          <p>
+            Under the institute's vision of "Excellence and Service," CHRIST (Deemed to be University) moulds students into excellent, service-oriented citizens. Our department fosters an environment that inspires academic and professional growth.
+          </p>
+          <p>
+            We offer industry-oriented programs that instill the statistical knowledge needed to extract insights from diverse datasets. Our graduates excel in critical thinking, real-time information extraction, and sustainable innovation in the data-driven domain.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------FOOTER----------  -->
+    <section class="footer">
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+      <p>Made By Jeremy <i class="fa fa-heart-o"></i></p>
+    </section>
+
+    <!-- <! ---------JavaScript for Toggle Menu ---------  > -->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+
+      // Scroll Animation for HOD Section
+document.addEventListener("scroll", () => {
+  const hodSection = document.querySelector(".about-hod");
+  const sectionPosition = hodSection.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight / 1.3;
+
+  if (sectionPosition < screenPosition) {
+    hodSection.classList.add("visible");
+  }
+});
+    </script>
+  </body>
+</html>

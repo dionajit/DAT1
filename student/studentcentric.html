@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Centric</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="main.js"></script>
+    <style>
+        body {
+
+    background-color: #000; /* Black background */
+
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        
+        /* Header styles matching home page */
+        .header {
+            min-height: 30vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(IMG/university\ copy.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        
+        /* Top navigation bar styles (matching home page) */
+        nav {
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav img {
+            width: 250px;
+        }
+
+        .nav-links {
+            flex: 1;
+            text-align: right;
+        }
+
+        .nav-links ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+
+        .nav-links ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .nav-links ul li::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+
+        /* Login button (from home page) */
+        .login-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
+            color: white !important;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(255, 75, 43, 0.3);
+        }
+
+        .login-btn:visited {
+            color: white !important;
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
+        }
+
+        .login-btn:hover {
+            background: linear-gradient(90deg, #ff4b2b, #ff416c);
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(255, 75, 43, 0.5);
+        }
+
+        nav .fa {
+            display: none;
+        }
+
+        @media(max-width: 700px) {
+            .nav-links ul li {
+                display: block;
+            }
+            .nav-links {
+                position: fixed;
+                background: #f44336;
+                height: 100vh;
+                width: 200px;
+                top: 0;
+                right: -200px;
+                text-align: left;
+                z-index: 2;
+                transition: 1s;
+            }
+            nav .fa {
+                display: block;
+                color: #fff;
+                margin: 10px;
+                font-size: 22px;
+                cursor: pointer;
+            }
+            .nav-links ul {
+                padding: 30px;
+            }
+        }
+
+        .poster {
+            text-align: center;
+            height: 30vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 62px;
+            font-weight: bold;
+        }
+
+        /* New Secondary Navigation Bar Styles */
+        .secondary-nav {
+            background: linear-gradient(135deg, #2b5876, #4e4376);
+            padding: 15px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 100;
+        }
+
+        .secondary-nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .secondary-nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .secondary-nav-links li {
+            margin: 0 5px;
+            position: relative;
+        }
+
+        .secondary-nav-links li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .secondary-nav-links li a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+            z-index: -1;
+            border-radius: 30px;
+        }
+
+        .secondary-nav-links li a:hover:before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .secondary-nav-links li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .secondary-nav-links li a i {
+            margin-right: 8px;
+        }
+
+        .secondary-nav-links li a.active {
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .secondary-nav-container {
+                flex-direction: column;
+            }
+            
+            .secondary-nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .secondary-nav-links li {
+                margin: 5px;
+            }
+            
+            .secondary-nav-links li a {
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+        }
+        /* Dropdown Styles */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #444;
+            min-width: 180px;
+            z-index: 1000;
+        }
+
+        .dropdown-menu li {
+            display: block;
+        }
+
+        .dropdown-menu a {
+            padding: 10px;
+            display: block;
+            color: white;
+        }
+
+        .dropdown-menu a:hover {
+            background: #666;
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Ensures elements wrap on smaller screens */
+  justify-content: space-evenly; /* Distributes elements evenly */
+  align-items: flex-start; /* Aligns items at the top */
+  gap: 20px; /* Space between items */
+}
+
+figure.snip1390 {
+  font-family: 'Roboto', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  flex: 1 1 300px; /* Allows flexibility but ensures a max width */
+  color: #000000;
+  text-align: center;
+  font-size: 16px;
+  background-color: #2C3447;
+  padding: 30px;
+  background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+figure.snip1390 *,
+figure.snip1390 *:before,
+figure.snip1390 *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+figure.snip1390 figcaption {
+  width: 100%;
+}
+
+figure.snip1390 h2,
+figure.snip1390 h4,
+figure.snip1390 blockquote {
+  margin: 0;
+}
+
+figure.snip1390 h2,
+figure.snip1390 h4 {
+  font-weight: 300;
+}
+
+figure.snip1390 h2 {
+  color: #ffffff;
+}
+
+figure.snip1390 h4 {
+  color: #a6a6a6;
+}
+
+figure.snip1390 blockquote {
+  font-size: 1em;
+  padding: 45px 20px 40px 50px;
+  margin-top: 30px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: inset -1.4px -1.4px 2px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  position: relative;
+}
+
+figure.snip1390 blockquote:before {
+  font-family: 'FontAwesome';
+  content: "\201C";
+  position: absolute;
+  font-size: 70px;
+  opacity: 0.25;
+  font-style: normal;
+  top: 0px;
+  left: 20px;
+}
+
+figure.snip1390 .profile {
+  width: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+  border: solid 5px #A6A57A;
+}
+
+
+
+
+
+
+  
+       
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="IMG/logo3 copy.png" alt="logo" style="width: 250px; height: auto;" /></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="../index.php">HOME</a></li>
+                    <li><a href="../about.html">ABOUT</a></li>
+                    <li class="dropdown">
+                        <a href="#">ACTIVITIES</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="studentcentric.html">STUDENT CENTRIC ACTIVITIES</a></li>
+                      <li><a href="../facultycentric.php">FACULTY CENTRIC ACTIVITIES</a></li>
+                      <li><a href="../reports.php">DEPARTMENT REPORTS ARCHIVE</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="../contact.php">CONTACT</a></li>
+                    <li><a href="../gallery.html">GALLERY</a></li>
+                    
+                </ul>
+            </div>
+            <a href="login.html" class="login-btn">Sign in</a>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="poster">
+            Student centric
+        </div>
+    </section>
+
+    <div class="secondary-nav">
+        <div class="secondary-nav-container">
+            <ul class="secondary-nav-links">
+                <li class="dropdown">
+                    <a href="#"><i class="fa fa-users"></i> Event ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tarang.html">Tarang</a></li>
+                        <li><a href="datamaze.html">Datamaze</a></li>
+                        <li><a href="prediction.html">Prediction</a></li>
+                        <li><a href="national.html">National Statistics Day</a></li>
+                    </ul>
+                </li>
+                </li>
+                <li><a href="placementbro.html"><i class="fa fa-book"></i> PLACEMENTS BROCHURE</a></li>
+                <li><a href="achi copy.html"><i class="fa fa-trophy"></i> ACHIEVEMENTS</a></li>
+            </ul>
+        </div>
+    </div>
+    <section class="creative-photography--slider theme1">
+		<div class="swiper-container photography-swiper--slider">
+			<div class="swiper-wrapper">
+				<!-- Slide 1 -->
+				<div class="swiper-slide">
+					<div class="photography-slider--item">
+						<!-- Layer Image -->
+						<div class="photography-slider--layer">
+							<img src="https://imgpanda.com/upload/ib/QTBKjzDqxD.png" alt="img">
+						</div>
+						<div class="photography-slider--content">
+							<div class="photography-slider--image">
+								<img src="IMG/Green Pink Illustration We Are Closed Yard Sign (2) copy.png" alt="img">								
+								<div class="photography-slider--inner">
+									<div class="photography-heading">
+										<div class="photography-item--inner">
+											<h1 class="photography-item--title">Fest<br> <span>Prediction</span></h1>
+											<h1 class="photography-item--title-outline">Folio</h1>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Slide 2 -->
+				<div class="swiper-slide">
+					<div class="photography-slider--item">
+						<!-- Layer Image -->
+						<div class="photography-slider--layer">
+							<img src="https://imgpanda.com/upload/ib/QTBKjzDqxD.png" alt="img">
+						</div>
+						<div class="photography-slider--content">
+							<div class="photography-slider--image">
+								<img src="IMG/Green Pink Illustration We Are Closed Yard Sign (2) copy.png" alt="img">								
+								<div class="photography-slider--inner">
+									<div class="photography-heading">
+										<div class="photography-item--inner">
+											<h1 class="photography-item--title">Fest <br> <span>Prediction</span></h1>
+											<h1 class="photography-item--title-outline">Folio</h1>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Slide 3 -->
+				<div class="swiper-slide">
+					<div class="photography-slider--item">
+						<!-- Layer Image -->
+						<div class="photography-slider--layer">
+							<img src="https://imgpanda.com/upload/ib/QTBKjzDqxD.png" alt="img">
+						</div>
+						<div class="photography-slider--content">
+							<div class="photography-slider--image">
+								<img src="IMG/Green Pink Illustration We Are Closed Yard Sign (2) copy.png" alt="img">								
+								<div class="photography-slider--inner">
+									<div class="photography-heading">
+										<div class="photography-item--inner">
+											<h1 class="photography-item--title">Fest <br> <span>Prediction</span></h1>
+											<h1 class="photography-item--title-outline">Folio</h1>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Slide 4 -->
+				<div class="swiper-slide">
+					<div class="photography-slider--item">
+						<!-- Layer Image -->
+						<div class="photography-slider--layer">
+							<img src="https://imgpanda.com/upload/ib/QTBKjzDqxD.png" alt="img">
+						</div>
+						<div class="photography-slider--content">
+							<div class="photography-slider--image">
+								<img src="IMG/Green Pink Illustration We Are Closed Yard Sign (2) copy.png" alt="img">								
+								<div class="photography-slider--inner">
+									<div class="photography-heading">
+										<div class="photography-item--inner">
+											<h1 class="photography-item--title">Fest <br> <span>Prediction</span></h1>
+											<h1 class="photography-item--title-outline">Folio</h1>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Slide 5 -->
+				<div class="swiper-slide">
+					<div class="photography-slider--item">
+						<!-- Layer Image -->
+						<div class="photography-slider--layer">
+							<img src="https://imgpanda.com/upload/ib/QTBKjzDqxD.png" alt="img">
+						</div>
+						<div class="photography-slider--content">
+							<div class="photography-slider--image">
+								<img src="IMG/Green Pink Illustration We Are Closed Yard Sign (2) copy.png" alt="img">								
+								<div class="photography-slider--inner">
+									<div class="photography-heading">
+										<div class="photography-item--inner">
+											<h1 class="photography-item--title">Fest <br> <span>Prediction</span></h1>
+											<h1 class="photography-item--title-outline">Folio</h1>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Slide 6 -->
+				<div class="swiper-slide">
+					<div class="photography-slider--item">
+						<!-- Layer Image -->
+						<div class="photography-slider--layer">
+							<img src="https://imgpanda.com/upload/ib/QTBKjzDqxD.png" alt="img">
+						</div>
+						<div class="photography-slider--content">
+							<div class="photography-slider--image">
+								<img src="IMG/Green Pink Illustration We Are Closed Yard Sign (2) copy.png" alt="img">								
+								<div class="photography-slider--inner">
+									<div class="photography-heading">
+										<div class="photography-item--inner">
+											<h1 class="photography-item--title">Fest <br> <span>Prediction</span></h1>
+											<h1 class="photography-item--title-outline">Folio</h1>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Pagination -->
+				<div class="creative-swiper--dots">
+                <div class="swiper-pagination"></div>
+                </div>
+			</div>
+		</div>
+	</section>
+    <div class="container">
+  <figure class="snip1390">
+    <img src="https://www.womentech.net/sites/default/files/styles/cms_bootstrap_1_4/public/webform/global_awards_nomination_2022/95875/sneha-ganesh-prof-2.jpeg?itok=TqyXtlbj" alt="profile-sample3" class="profile" />
+    <figcaption>
+      <h2>sneha ganesh<h2>
+      <h4>UX Design</h4>
+      <blockquote>Dad buried in landslide! Jubilant throngs fill streets! Stunned father inconsolable - demands recount!</blockquote>
+    </figcaption>
+  </figure>
+
+  <figure class="snip1390 hover">
+    <img src="https://media.licdn.com/dms/image/v2/D4D03AQEPwVUVfEM8jw/profile-displayphoto-shrink_200_200/B4DZQn78CLGUAY-/0/1735836814173?e=2147483647&v=beta&t=q3vtaqghK_b8KV8qM1VhHy9Zb3Sr7aEIWjwNL8QEwHQ" alt="profile-sample5" class="profile" />
+    <figcaption>
+      <h2>Raghav sood</h2>
+      <h4>Accountant</h4>
+      <blockquote>Wormwood : Calvin, how about you? Calvin : Hard to say ma'am. I think my cerebellum has just fused. </blockquote>
+    </figcaption>
+  </figure>
+
+  <figure class="snip1390">
+    <img src="https://media.licdn.com/dms/image/v2/D5603AQE6ZLNXqbmYxw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1701948718513?e=2147483647&v=beta&t=lU5faFJlXuIlKq0Z2mzuUIxglbTIH4sJouW3-xk2xbc" alt="profile-sample6" class="profile" />
+    <figcaption>
+      <h2>janvi choudhary</h2>
+      <h4>Public Relations</h4>
+      <blockquote>The strength to change what I can, the inability to accept what I can't and the incapacity to tell the difference.</blockquote>
+    </figcaption>
+  </figure>
+</div>
+
+
+   
+
+    
+    <script>
+        // Mobile menu toggle
+        function showMenu() {
+            document.getElementById("navLinks").style.right = "0";
+        }
+        
+        function hideMenu() {
+            document.getElementById("navLinks").style.right = "-200px";
+        }
+    
+        document.addEventListener("DOMContentLoaded", function () {
+            let carousel = document.querySelector("#carouselExampleControls");
+            if (window.matchMedia("(min-width: 576px)").matches) {
+                let items = document.querySelectorAll(".carousel-item");
+                let cardWidth = items[0].getBoundingClientRect().width;
+                let scrollPosition = 0;
+
+                document.querySelector(".carousel-control-next").addEventListener("click", function () {
+                    if (scrollPosition < (items.length - 1) * cardWidth) {
+                        scrollPosition += cardWidth;
+                        document.querySelector(".carousel-inner").scrollLeft = scrollPosition;
+                    }
+                });
+
+                document.querySelector(".carousel-control-prev").addEventListener("click", function () {
+                    if (scrollPosition > 0) {
+                        scrollPosition -= cardWidth;
+                        document.querySelector(".carousel-inner").scrollLeft = scrollPosition;
+                    }
+                });
+            }
+
+            // Set active tab in secondary nav
+            function setActiveTab() {
+                const currentPage = window.location.pathname.split("/").pop();
+                const navLinks = document.querySelectorAll('.secondary-nav-links li a');
+                
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === currentPage) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+            
+            setActiveTab();
+        });
+        /* Demo purposes only */
+$(".hover").mouseleave(
+  function () {
+    $(this).removeClass("hover");
+  }
+);
+    </script>
+</body>
+</html>
